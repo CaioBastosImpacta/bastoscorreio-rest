@@ -19,7 +19,7 @@ public class HandlerExceptionController extends ResponseEntityExceptionHandler {
 		mensagemModelResponse.setCodigoStatus(String.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()));
 		mensagemModelResponse.setMensagem("Erro interno na aplicação");
 		
-		return new ResponseEntity(mensagemModelResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+		return new ResponseEntity<MensagemModelResponse>(mensagemModelResponse, HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 	
 	@ExceptionHandler(RequisicaoInvalidaException.class)
@@ -29,6 +29,6 @@ public class HandlerExceptionController extends ResponseEntityExceptionHandler {
 		mensagemModelResponse.setCodigoStatus(String.valueOf(HttpStatus.BAD_REQUEST.value()));
 		mensagemModelResponse.setMensagem(exception.getMessage());
 		
-		return new ResponseEntity(mensagemModelResponse, HttpStatus.BAD_REQUEST);
+		return new ResponseEntity<MensagemModelResponse>(mensagemModelResponse, HttpStatus.BAD_REQUEST);
 	}
 }
