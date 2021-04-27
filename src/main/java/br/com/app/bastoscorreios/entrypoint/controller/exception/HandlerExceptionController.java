@@ -1,4 +1,4 @@
-package br.com.app.bastoscorreios.entrypoint.controller;
+package br.com.app.bastoscorreios.entrypoint.controller.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

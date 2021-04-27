@@ -16,7 +16,7 @@ public class EnderecoValidation {
 		
 		Boolean resultado = true;
 		
-		Pattern patternCep = Pattern.compile("^(([0-9]{2}\\.[0-9]{3}-[0-9]{3}|([0-9]{2}[0-9]{3})-[0-9]{3}|([0-9]){8}))$");
+		Pattern patternCep = Pattern.compile("^(([0-9]{2}\\.[0-9]{3}-[0-9]{3})|([0-9]{2}[0-9]{3})-[0-9]{3})|([0-9]){8}))$");
 		Matcher matcherCep = patternCep.matcher(cep);
 		resultado = matcherCep.find();
 		

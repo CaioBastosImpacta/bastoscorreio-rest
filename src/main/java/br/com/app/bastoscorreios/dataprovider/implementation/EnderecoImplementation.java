@@ -24,8 +24,7 @@ public class EnderecoImplementation implements EnderecoGateway {
 		String url = montaUrlCorreio(cep);
 		
 		ResponseEntity<EnderecoEntityResponse> enderecoEntityResponse =
-				this.restTemplate.exchange(url, HttpMethod.GET, null, new ParameterizedTypeReference<EnderecoEntityResponse>() {
-				});
+				this.restTemplate.exchange(url, HttpMethod.GET, null, new ParameterizedTypeReference<EnderecoEntityResponse>() {});
 		
 		return EnderecoMapperEntityToDomain.converter(enderecoEntityResponse.getBody());
 	}
