@@ -1,4 +1,4 @@
-package br.com.app.bastoscorreios.configuration;
+package br.com.app.bastoscorreios.adapters.configuration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,6 @@ public class RestClientConfiguration {
 	public RestTemplate getRestTemplate() {
 		
 		RestTemplate restTemplate = new RestTemplate();
-		
 		List<ClientHttpRequestInterceptor> clientHttpRequestInterceptors = restTemplate.getInterceptors();
 		
 		if(CollectionUtils.isEmpty(clientHttpRequestInterceptors)) {
